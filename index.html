@@ -8,6 +8,64 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    /* News carousel caption visibility */
+#newsCarousel .carousel-caption {
+  font-size: 1rem;
+  padding: 8px 12px;
+  background: rgba(0, 0, 0, 0.5); /* darken background for visibility */
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  #newsCarousel img {
+    height: 280px; /* resize for tablets */
+  }
+  #newsCarousel .carousel-caption {
+    font-size: 0.85rem;
+    bottom: 15px;
+  }
+  #newsCarousel .carousel-caption h5 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  #newsCarousel img {
+    height: 220px; /* resize for mobile */
+  }
+  #newsCarousel .carousel-caption {
+    font-size: 0.8rem;
+    bottom: 10px;
+  }
+  #newsCarousel .carousel-caption h5 {
+    font-size: 1rem;
+  }
+}
+.hero-slide {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+@media (max-width: 768px) {
+  .hero-slide {
+    height: 80vh; /* smaller height for tablets */
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); /* adjust shape */
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-slide {
+    height: 70vh; /* smaller height for phones */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%); /* softer angle on mobile */
+  }
+}
+
     body {
       font-family: 'Open Sans', sans-serif;
       scroll-behavior: smooth;
@@ -1017,5 +1075,6 @@ document.querySelectorAll('.color-hover').forEach(el => {
   </script>
 </body>
 </html>
+
 
 
